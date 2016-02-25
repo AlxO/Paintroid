@@ -51,6 +51,8 @@
         android:allowBackup="false"
         android:largeHeap="true"
         android:vmSafeMode="@bool/vmSafeMode" >
+        android:supportsRtl="true"
+        android:configChanges="layoutDirection|locale">
 
         <!-- [prol] disabled Title Bar and Landscape Mode -->
         <activity
