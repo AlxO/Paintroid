@@ -58,8 +58,8 @@ public class ResizeToolIntegrationTest extends BaseIntegrationTestClass {
 	private final int MAXIMUM_BITMAP_SIZE_FACTOR = 4;
 	private int mLineLength;
 	private final int STABLE_TIME_FOR_THREADS_AND_BITMAPS_UPDATE = 800;	// !try multiple times with emulators and
-																		// different hardware before decreasing the
-																		// value!
+	// different hardware before decreasing the
+	// value!
 	public enum BitmapSide {
 		LEFT, TOP, RIGHT, BOTTOM
 	}
@@ -980,7 +980,7 @@ public class ResizeToolIntegrationTest extends BaseIntegrationTestClass {
 
 		PointF outsideBitmapToolPosition = new PointF(
 				mCurrentDrawingSurfaceBitmap.getWidth() + mCurrentDrawingSurfaceBitmap.getWidth() / 2.0f,
-				 mCurrentDrawingSurfaceBitmap.getHeight() / 2.0f);
+				mCurrentDrawingSurfaceBitmap.getHeight() / 2.0f);
 		PrivateAccess.setMemberValue(BaseToolWithShape.class, PaintroidApplication.currentTool,
 				TOOL_MEMBER_POSITION, outsideBitmapToolPosition);
 		mSolo.sleep(SHORT_SLEEP);
@@ -988,7 +988,7 @@ public class ResizeToolIntegrationTest extends BaseIntegrationTestClass {
 				PaintroidApplication.currentTool, TOOL_MEMBER_RESIZE_BOUND_LEFT);
 		mSolo.clickOnView(mMenuBottomParameter2, true);
 		assertTrue("Nothing to resize text missing", mSolo.waitForText(mSolo.getString(
-		R.string.resize_nothing_to_resize)));
+				R.string.resize_nothing_to_resize)));
 
 	}
 

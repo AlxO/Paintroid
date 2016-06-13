@@ -130,10 +130,13 @@
     <string name="text_tool_dialog_font_monospace">Monospace</string>
     <string name="text_tool_dialog_font_serif">Serif</string>
     <string name="text_tool_dialog_font_sans_serif">Sans Serif</string>
-
+    
     <string name="fill_tool_dialog_title">Fill Tool settings</string>
     <string name="fill_tool_dialog_color_tolerance_title">Color tolerance:</string>
     <string name="fill_tool_dialog_input_hint_toast">Please enter a number between 0 to 100</string>
+    <string name="resize_to_resize_tap_text">to resize tap</string>
+    <string name="resize_nothing_to_resize">nothing to resize</string>
+    <string name="resize_max_image_resolution_reached">max image resolution reached</string>
 
     <!-- Extras -->
     <string name="ext_storage_directory_name" translatable="false">Pocket Paint</string>
