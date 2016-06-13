@@ -29,6 +29,7 @@ import org.catrobat.paintroid.dialog.FillToolDialog;
 import org.catrobat.paintroid.dialog.IndeterminateProgressDialog;
 import org.catrobat.paintroid.dialog.InfoDialog;
 import org.catrobat.paintroid.dialog.InfoDialog.DialogType;
+import org.catrobat.paintroid.dialog.MultiLanguageDialog;
 import org.catrobat.paintroid.dialog.TextToolDialog;
 import org.catrobat.paintroid.dialog.ToolsDialog;
 import org.catrobat.paintroid.dialog.colorpicker.ColorPickerDialog;
