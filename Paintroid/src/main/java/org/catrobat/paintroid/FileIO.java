@@ -59,8 +59,34 @@ public abstract class FileIO {
 		return MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
 	}
 
-	public static boolean saveBitmap(Context context, Bitmap bitmap) {
-		return saveBitmap(context, bitmap, null);
+	public static boolean saveBitmap(Context context, Bitmap bitmap, boolean autoSave) {
+		if(!autoSave)
+			return saveBitmap(context, bitmap, null);
+		else
+			return saveTemp(context, bitmap, null);
+	}
+
+	public static boolean saveTemp(Context context, Bitmap bitmap, String path) {
+		final int QUALITY = 100;
+		final Bitmap.CompressFormat FORMAT = Bitmap.CompressFormat.PNG;
+		OutputStream outputStream = null;
+
+		boolean asdf = initialisePaintroidMediaDirectory();
+
+		File file = new File(PAINTROID_MEDIA_FILE, "temp.tpng");
+
+		boolean isSaved = false;
+
+		try {
+			outputStream = new FileOutputStream(file);
+
+			isSaved =  bitmap.compress(FORMAT, QUALITY, outputStream);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		PaintroidApplication.autoSave = false;
+		return isSaved;
 	}
 
 	public static boolean saveBitmap(Context context, Bitmap bitmap, String path) {

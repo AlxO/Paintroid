@@ -342,7 +342,7 @@ public abstract class OptionsMenuActivity extends SherlockFragmentActivity {
 	public void saveFile() {
 
 		if (!FileIO.saveBitmap(this,
-				PaintroidApplication.drawingSurface.getBitmapCopy())) {
+				PaintroidApplication.drawingSurface.getBitmapCopy(), PaintroidApplication.autoSave)) {
 			new InfoDialog(DialogType.WARNING,
 					R.string.dialog_error_sdcard_text,
 					R.string.dialog_error_save_title).show(

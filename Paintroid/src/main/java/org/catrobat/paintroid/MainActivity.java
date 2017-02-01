@@ -185,6 +185,14 @@ public class MainActivity extends OptionsMenuActivity {
 	}
 
 	@Override
+	public void onPause() {
+		super.onPause();
+		PaintroidApplication.autoSave = true;
+		SaveTask saveCopyTask = new OptionsMenuActivity.SaveTask(this);
+		saveCopyTask.execute();
+	}
+
+	@Override
 	protected void onResume() {
 		super.onResume();
 		checkIfLoadBitmapFailed();
